@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="#"><img src="images/logo.jpeg" width="30%" height="30%" alt="logo"></a>
+    </div>
+    <ul class="navbar-links" id="navbar-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="navbar-toggle">
+      <label class="switch">
+        <input type="checkbox" id="toggleSwitch">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="navbar-toggle" id="navbar-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="hero">
+        <div class="intro">
+          <div class="me">
+            <h2>Hello, It's Me</h2>
+            <h1>Developer Name</h1>
+          </div>
+          <h2>I'm a <strong class="web-developer">Web Developer</strong></h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h1>
+          <div class="social-icons">
+            <p>Let's connect</p>
+            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <a href="#"><i class='bx bxl-github'></i></a>
+            <a href="#"><i class='bx bxl-whatsapp-square'></i></a>
+          </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/developer-picture.jpeg" alt="Developer Image">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About <span>Me</span></h2>
+        <div class="about-content">
+          <div class="certificate">
+            <div class="slider-container">
+              <img src="images/certificate.jpeg" alt="Certificate">
+              <img src="images/project-1.png" alt="Second Certificate">
+              <img src="images/project-2.jpeg" alt="Third Certificate">
+            </div>
+            <div class="slider-dots">
+              <span class="dot active" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <div class="corner-circle top-left">HTML</div>
+            <div class="corner-circle bottom-right">CSS</div>
+            <div class="corner-diamond bottom-left"><span>JavaScript</span></div>
+          </div>
+          <div class="description">
+              <p>Hello! I am Mahboba Qarizada, and student of Web development product. I Love creating beautiful experiences that benefit bot businesses and users. I enjoy working through date and numbers to create impactful designs. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <div class="skills">
+                <div class="technical">
+                  <h3>Technical Skills</h3>
+                  <div class="skill-bar">
+                      <div class="bar html" style="width: 80%;">HTML</div>
+                  </div>
+                  <div class="skill-bar">
+                      <div class="bar css" style="width: 65%;">CSS</div>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="bar javascript" style="width: 50%;">Javascript</div>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="bar git & github" style="width: 50%;">Git & Github</div>
+                  </div>
+                </div>
+                <div class="professional"></div>           
+              </div>
+              <button>Download CV</button>
+          </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <div class="carousel">
+        <div class="carousel__cards">
+          <div class="carousel__card">
+            <img class="carousel__img"src="images/project-1.png" alt="Project 1">
+          </div>
+          <div class="carousel__card">
+            <img class="carousel__img" src="images/project-2.jpeg" alt="Project 2">
+          </div>
+          <div class="carousel__card">
+            <img class="carousel__img" src="images/project-3.png" alt="Project 3">
+          </div>
+          <div class="carousel__card">
+            <img class="carousel__img" src="images/project-4.jpeg" alt="Project 4">
+          </div>
+          <div class="carousel__card">
+            <img class="carousel__img" src="images/project-5.png" alt="Project 5">
+          </div>
+          <div class="carousel__card">
+            <img class="carousel__img"src="images/project-1.png" alt="Project 6">
+          </div>
+          <div class="carousel__card">
+            <img class="carousel__img" src="images/project-3.png" alt="Project 7">
+          </div>
+          <div class="carousel__card">
+            <img class="carousel__img" src="images/project-4.jpeg" alt="Project 8">
+          </div>
+        </div>
+        <div class="carousel__control">
+          <span class="carousel__btn carousel__btn--back"><i class='bx bx-chevron-left bx-lg'></i></span>
+          <span class="carousel__btn carousel__btn--next"><i class='bx bx-chevron-right bx-lg'></i></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact <span>Me</span></h2>
+        <form id="contactForm">
+          <input type="text" name="firstname" placeholder="Firstname" id="firstname">
+          <div class="error-message" id="firstnameError"></div>
+          
+          <input type="text" name="lastname" placeholder="Lastname" id="lastname">
+          <div class="error-message" id="lastnameError"></div>
+          
+          <input type="email" name="email" placeholder="Email" id="email">
+          <div class="error-message" id="emailError"></div>
+          
+          <input type="text" name="phone" placeholder="Phone Number" id="phone">
+          <div class="error-message" id="phoneError"></div>
+          
+          <textarea name="message" placeholder="Your Message" id="message"></textarea>
+          <div class="error-message" id="messageError"></div>
+
+            <div class="contact-form-button">
+              <button type="submit">Submit</button>
+            </div>
+        </form>
+        <div class="footer-social-icons">
+          <a href="#"><i class='bx bxl-facebook-circle bx-md'></i></a>
+          <a href="#"><i class='bx bxl-linkedin bx-md'></i></a>
+          <a href="#"><i class='bx bxl-whatsapp-square bx-md' ></i>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
