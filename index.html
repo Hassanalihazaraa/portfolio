@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Navbar</title>
+  <title>Personal Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <nav class="navbar">
+  <!-- <nav class="navbar">
     <div class="navbar-logo">
       <a href="#"><img src="images/logo.jpeg" width="30%" height="30%" alt="logo"></a>
     </div>
@@ -29,9 +29,35 @@
       <span class="bar"></span>
       <span class="bar"></span>
     </div>
-  </nav>
+  </nav> -->
+
+  <header class="navbar">
+    <div class="navbar-logo">
+      <a href="#"><img src="images/logo.jpeg" width="30%" height="30%" alt="logo"></a>
+    </div>
+    <div class="navbar-toggle" id="hamburger-menu">
+      <div class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
+    </div>
+    <ul class="navbar-links" id="navbar-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#profile">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="menu-item">
+        <label class="switch">
+          <input type="checkbox" id="theme-switch">
+          <span class="slider"></span>
+        </label>
+      </li>
+    </ul>
+  </header>
 
   <main>
+    <!-- Main hero section -->
     <section class="hero" id="hero">
         <div class="intro">
           <div class="me">
@@ -53,113 +79,177 @@
         </div>
     </section>
 
-    <section class="about" id="about">
-        <h2>About <span>Me</span></h2>
-        <div class="about-content">
-          <div class="certificate">
-            <div class="slider-container">
-              <img src="images/certificate.jpeg" alt="Certificate">
-              <img src="images/project-1.png" alt="Second Certificate">
-              <img src="images/project-2.jpeg" alt="Third Certificate">
-            </div>
-            <div class="slider-dots">
-              <span class="dot active" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-            <div class="corner-circle top-left">HTML</div>
-            <div class="corner-circle bottom-right">CSS</div>
-            <div class="corner-diamond bottom-left"><span>JavaScript</span></div>
+    <!-- About me section -->
+    <section class="profile" id="profile">
+      <h2>About <span>Me</span></h2>
+      <div class="profile-content">
+        <div class="credentials">
+          <div class="carousel-container">
+            <img src="images/certificate.jpeg" alt="Certificate">
+            <img src="images/project-1.png" alt="Second Certificate">
+            <img src="images/project-2.jpeg" alt="Third Certificate">
           </div>
-          <div class="description">
-              <p>Hello! I am Mahboba Qarizada, and student of Web development product. I Love creating beautiful experiences that benefit bot businesses and users. I enjoy working through date and numbers to create impactful designs. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div class="skills">
-                <div class="technical">
-                  <h3>Technical Skills</h3>
-                  <div class="skill-bar">
-                      <div class="bar html" style="width: 80%;">HTML</div>
+          <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+          <div class="icon-circle top-left">HTML</div>
+          <div class="icon-circle bottom-right">CSS</div>
+          <div class="icon-diamond bottom-left"><span>JavaScript</span></div>
+        </div>
+        <div class="expertise">
+          <section class="intro-section">
+            <p class="intro-description">
+              Hello! I’m an enthusiastic web development student, continually enhancing my abilities in various aspects of remote development. I am committed to excellence in every project I undertake. Join me on this exciting web development journey!
+            </p>
+          </section>
+    
+          <section class="skills-overview">
+            <div class="tech-skills">
+              <h2>Technical Skills</h2>
+              <ul class="tech-skills-list">
+                <li>
+                  <div class="skill-name">
+                    <span>HTML</span>
+                    <span>95%</span>
                   </div>
-                  <div class="skill-bar">
-                      <div class="bar css" style="width: 65%;">CSS</div>
+                  <div class="progress-bar html-progress"></div>
+                </li>
+                <li>
+                  <div class="skill-name">
+                    <span>CSS</span>
+                    <span>87%</span>
                   </div>
-                  <div class="skill-bar">
-                    <div class="bar javascript" style="width: 50%;">Javascript</div>
+                  <div class="progress-bar css-progress"></div>
+                </li>
+                <li>
+                  <div class="skill-name">
+                    <span>JavaScript</span>
+                    <span>75%</span>
                   </div>
-                  <div class="skill-bar">
-                    <div class="bar git & github" style="width: 50%;">Git & Github</div>
+                  <div class="progress-bar js-progress"></div>
+                </li>
+                <li>
+                  <div class="skill-name">
+                    <span>Git & GitHub</span>
+                    <span>75%</span>
                   </div>
+                  <div class="progress-bar git-progress"></div>
+                </li>
+              </ul>
+            </div>
+    
+            <div class="soft-skills">
+              <h2>Professional Skills</h2>
+              <div class="soft-skills-grid">
+                <div class="skill-sphere">
+                  <div class="sphere-content">
+                    <div class="sphere-percentage">80%</div>
+                  </div>
+                  <p>Team Work</p>
                 </div>
-                <div class="professional"></div>           
+    
+                <div class="skill-sphere">
+                  <div class="sphere-content">
+                    <div class="sphere-percentage">85%</div>
+                  </div>
+                  <p>Creativity</p>
+                </div>
+    
+                <div class="skill-sphere">
+                  <div class="sphere-content">
+                    <div class="sphere-percentage">70%</div>
+                  </div>
+                  <p>Management</p>
+                </div>
+    
+                <div class="skill-sphere">
+                  <div class="sphere-content">
+                    <div class="sphere-percentage">90%</div>
+                  </div>
+                  <p>Problem Solving</p>
+                </div>
               </div>
-              <button>Download CV</button>
-          </div>
-        </div>
-    </section>
+            </div>
+          </section>
 
-    <section class="projects" id="projects">
-      <h2>Projects</h2>
-      <div class="carousel">
-        <div class="carousel__cards">
-          <div class="carousel__card">
-            <img class="carousel__img"src="images/project-1.png" alt="Project 1">
+          <div class="cv-download">
+            <button id="cv-download-button" type="button">
+              <a href="#" download="YourCV.pdf">Download CV</a>
+            </button>
           </div>
-          <div class="carousel__card">
-            <img class="carousel__img" src="images/project-2.jpeg" alt="Project 2">
-          </div>
-          <div class="carousel__card">
-            <img class="carousel__img" src="images/project-3.png" alt="Project 3">
-          </div>
-          <div class="carousel__card">
-            <img class="carousel__img" src="images/project-4.jpeg" alt="Project 4">
-          </div>
-          <div class="carousel__card">
-            <img class="carousel__img" src="images/project-5.png" alt="Project 5">
-          </div>
-          <div class="carousel__card">
-            <img class="carousel__img"src="images/project-1.png" alt="Project 6">
-          </div>
-          <div class="carousel__card">
-            <img class="carousel__img" src="images/project-3.png" alt="Project 7">
-          </div>
-          <div class="carousel__card">
-            <img class="carousel__img" src="images/project-4.jpeg" alt="Project 8">
-          </div>
-        </div>
-        <div class="carousel__control">
-          <span class="carousel__btn carousel__btn--back"><i class='bx bx-chevron-left bx-lg'></i></span>
-          <span class="carousel__btn carousel__btn--next"><i class='bx bx-chevron-right bx-lg'></i></span>
         </div>
       </div>
-    </section>
+    </section>    
 
-    <section class="contact" id="contact">
-        <h2>Contact <span>Me</span></h2>
-        <form id="contactForm">
-          <input type="text" name="firstname" placeholder="Firstname" id="firstname">
-          <div class="error-message" id="firstnameError"></div>
-          
-          <input type="text" name="lastname" placeholder="Lastname" id="lastname">
-          <div class="error-message" id="lastnameError"></div>
-          
-          <input type="email" name="email" placeholder="Email" id="email">
-          <div class="error-message" id="emailError"></div>
-          
-          <input type="text" name="phone" placeholder="Phone Number" id="phone">
-          <div class="error-message" id="phoneError"></div>
-          
-          <textarea name="message" placeholder="Your Message" id="message"></textarea>
-          <div class="error-message" id="messageError"></div>
-
-            <div class="contact-form-button">
-              <button type="submit">Submit</button>
-            </div>
-        </form>
-        <div class="footer-social-icons">
-          <a href="#"><i class='bx bxl-facebook-circle bx-md'></i></a>
-          <a href="#"><i class='bx bxl-linkedin bx-md'></i></a>
-          <a href="#"><i class='bx bxl-whatsapp-square bx-md' ></i>
+  <!--  Projects sections -->
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="carousel">
+      <div class="carousel__cards">
+        <!-- Carousel cards will be dynamically populated by JavaScript -->
+      </div>
+      <div class="carousel__control">
+        <span class="carousel__btn carousel__btn--back"><i class='bx bx-chevron-left bx-lg'></i></span>
+        <span class="carousel__btn carousel__btn--next"><i class='bx bx-chevron-right bx-lg'></i></span>
+      </div>
+    </div>
+  </section>
+    
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-title">
+        <h2 id="modalTitle"></h3>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-container">
+        <div class="modal-image-container">
+          <a id="modalLink" href="#" target="_blank">View Project</a>
+          <!-- Image will be dynamically inserted here by JavaScript -->
         </div>
-    </section>
+        <div class="modal-details-container">
+          <p id="modalDescription"></p>
+          <div id="modalLabels" class="modal-labels">
+            <!-- Labels will be dynamically inserted here by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact section -->
+  <section class="contact" id="contact">
+    <h2>Contact <span>Me</span></h2>
+    <form id="contactForm">
+      <input type="text" name="firstname" maxlength="30" placeholder="Firstname" id="firstname">
+      <div class="error-message" id="firstnameError"></div>
+      
+      <input type="text" name="lastname" maxlength="30" placeholder="Lastname" id="lastname">
+      <div class="error-message" id="lastnameError"></div>
+      
+      <input type="email" name="email" placeholder="Email" id="email">
+      <div class="error-message" id="emailError"></div>
+      
+      <input type="text" name="phone" placeholder="Phone Number" id="phone">
+      <div class="error-message" id="phoneError"></div>
+      
+      <textarea name="message" placeholder="Your Message" maxlength="500" id="message"></textarea>
+      <div class="error-message" id="messageError"></div>
+
+      <div class="contact-form-button">
+        <button type="submit">Submit</button>
+      </div>
+
+        <!-- Alert Message -->
+      <div id="formAlert" class="form-alert"></div>
+    </form>
+    <div class="footer-social-icons">
+      <a href="#"><i class='bx bxl-facebook-circle bx-md'></i></a>
+      <a href="#"><i class='bx bxl-linkedin bx-md'></i></a>
+      <a href="#"><i class='bx bxl-whatsapp-square bx-md' ></i>
+    </div>
+  </section>
 </main>
 
 <script src="script.js"></script>
